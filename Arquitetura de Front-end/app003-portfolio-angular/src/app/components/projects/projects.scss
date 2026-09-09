@@ -1,0 +1,10 @@
+#projetos { background: var(--surface); }
+.project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 2rem; }
+.project-card { overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius); background: var(--background); }
+.project-image { display: grid; place-items: center; min-height: 12rem; color: var(--muted); background: var(--accent-soft); }
+.project-body { padding: 1.5rem; }
+.project-body p { min-height: 3rem; color: var(--muted); }
+.tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-block: 1.25rem; }
+.tags span { padding: .35rem .65rem; border-radius: 99px; color: var(--accent); background: var(--accent-soft); font-size: .8rem; font-weight: 700; }
+.text-link { color: var(--accent); font-weight: 800; }
+@media (max-width: 700px) { .project-grid { grid-template-columns: 1fr; } }

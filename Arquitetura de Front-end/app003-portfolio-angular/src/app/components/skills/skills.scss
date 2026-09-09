@@ -1,0 +1,10 @@
+.skill-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; padding: 0; margin: 2rem 0 0; list-style: none; }
+.skill-list li { display: flex; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid var(--border); font-weight: 700; }
+.dots { display: inline-flex; gap: .35rem; align-items: center; }
+.dot { width: .7rem; height: .7rem; border: 1px solid var(--accent); border-radius: 50%; background: transparent; }
+.dot.filled { background: var(--accent); }
+.toggle-button { display: flex; align-items: center; gap: .5rem; margin: 1.5rem auto 0; padding: .5rem .85rem; border: 1px solid var(--border); border-radius: 999px; color: var(--accent); background: var(--surface); font: inherit; font-weight: 800; cursor: pointer; }
+.toggle-button:hover { border-color: var(--accent); background: var(--accent-soft); }
+.chevron { width: 1.2rem; height: 1.2rem; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 3; transition: transform .2s ease; }
+.chevron.open { transform: rotate(180deg); }
+@media (max-width: 600px) { .skill-list { grid-template-columns: 1fr; } }

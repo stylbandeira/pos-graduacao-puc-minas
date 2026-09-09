@@ -1,0 +1,26 @@
+<section id="habilidades" class="section" aria-labelledby="skills-title">
+  <div class="container">
+    <p class="eyebrow">Conhecimentos</p>
+    <h2 id="skills-title">Habilidades</h2>
+    <ul id="skills-list" class="skill-list">
+      @for (skill of (showAll ? skills : skills.slice(0, 6)); track skill.name) {
+        <li>
+          <span>{{ skill.name }}</span>
+          <span class="dots" [attr.aria-label]="skill.level + ' de 5'">
+            @for (dot of [1, 2, 3, 4, 5]; track dot) {
+              <span class="dot" [class.filled]="dot <= skill.level" aria-hidden="true"></span>
+            }
+          </span>
+        </li>
+      }
+    </ul>
+    @if (skills.length > 6) {
+      <button class="toggle-button" type="button" [attr.aria-expanded]="showAll" [attr.aria-label]="showAll ? 'Ver menos habilidades' : 'Ver mais habilidades'" aria-controls="skills-list" (click)="toggleSkills()">
+        <svg class="chevron" [class.open]="showAll" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="m6 9 6 6 6-6" />
+        </svg>
+        <span>{{ showAll ? 'ver menos' : 'ver mais' }}</span>
+      </button>
+    }
+  </div>
+</section>

@@ -1,0 +1,7 @@
+.site-header { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid var(--border); background: color-mix(in srgb, var(--surface) 92%, transparent); backdrop-filter: blur(12px); }
+.header-content { display: flex; align-items: center; justify-content: space-between; min-height: 4.5rem; }
+.brand { color: var(--ink); font-size: 1.125rem; font-weight: 800; }
+nav { display: flex; gap: 1.25rem; }
+nav a { color: var(--muted); font-size: .9rem; font-weight: 600; }
+nav a:hover { color: var(--accent); }
+@media (max-width: 600px) { .header-content { align-items: flex-start; flex-direction: column; padding-block: 1rem; gap: 1rem; } nav { flex-wrap: wrap; gap: .75rem 1rem; } }

@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-header',
   standalone: true,
-  template: '<header><nav aria-label="Navegação principal"></nav></header>',
+  templateUrl: './header.html',
+  styleUrl: './header.scss',
 })
 export class HeaderComponent {}
